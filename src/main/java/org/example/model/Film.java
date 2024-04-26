@@ -1,74 +1,55 @@
 package org.example.model;
 
+import lombok.*;
+import org.example.validation.annotation.ValidReleaseYear;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import javax.validation.constraints.Pattern;
 import java.util.List;
 
 @Entity
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
 public class Film {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @NotBlank(message = "Title is required")
+    @Size(max = 255, message = "Title cannot be longer than 255 characters")
+    @Pattern(regexp = "^(?:[A-Z][a-z]*)(?:\\s+[A-Z][a-z]*|-[A-Z][a-z]*)*$",
+            message = "Each word should start with a capital letter followed by lowercase letters")
     private String title;
+
+    @NotNull(message = "Year is required")
+    @ValidReleaseYear
     private int year;
+
+    @NotBlank(message = "Director is required")
+    @Size(max = 255, message = "Director name cannot be longer than 255 characters")
+    @Pattern(regexp = "^(?:[A-Z][a-z]*)(?:\\s+[A-Z][a-z]*|-[A-Z][a-z]*)*$",
+            message = "Each word should start with a capital letter followed by lowercase letters")
     private String director;
 
     @ElementCollection
-    @CollectionTable(name="actors", joinColumns=@JoinColumn(name="actor_id"))
-    @Column(name="actors")
+    @CollectionTable(name = "actors", joinColumns = @JoinColumn(name = "actor_id"))
+    @Column(name = "actors")
+    @NotBlank(message = "Actors are required")
+    @Pattern(regexp = "^(?:[A-Z][a-z]*)(?:\\s+[A-Z][a-z]*)*$",
+            message = "Each word should start with a capital letter followed by lowercase letters")
     private List<String> actors;
 
     @ElementCollection
-    @CollectionTable(name="genres", joinColumns=@JoinColumn(name="genre_id"))
-    @Column(name="genres")
+    @CollectionTable(name = "genres", joinColumns = @JoinColumn(name = "genre_id"))
+    @Column(name = "genres")
+    @NotBlank(message = "Genres are required")
+    @Pattern(regexp = "^(?:[A-Z][a-z]*)(?:\\s+[A-Z][a-z]*|-[A-Z][a-z]*)*$",
+            message = "Each word should start with a capital letter followed by lowercase letters")
     private List<String> genres;
-
-    public Film(String title, int year, String director, List<String> actors, List<String> genres) {
-        this.title = title;
-        this.year = year;
-        this.director = director;
-        this.actors = actors;
-        this.genres = genres;
-    }
-
-    public Film() {
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-    public String getDirector() {
-        return director;
-    }
-
-    public void setDirector(String director) {
-        this.director = director;
-    }
-
-    public List<String> getActors() {
-        return actors;
-    }
-
-    public void setActors(List<String> actors) {
-        this.actors = actors;
-    }
-
-    public List<String> getGenres() {
-        return genres;
-    }
-
-    public void setGenres(List<String> genres) {
-        this.genres = genres;
-    }
 }
