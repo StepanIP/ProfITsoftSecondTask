@@ -1,0 +1,46 @@
+{
+  "databaseChangeLog": [
+    {
+      "include": {
+        "file": "liquibase-createTables.json",
+        "relativeToChangelogFile": true
+      }
+    },
+    {
+      "include": {
+        "file": "liquibase-insertDirectors.json",
+        "relativeToChangelogFile": true
+      }
+    },
+    {
+    "include": {
+      "file": "liquibase-insertActors.json",
+      "relativeToChangelogFile": true
+    }
+    },
+    {
+      "include": {
+        "file": "liquibase-insertFilms.json",
+        "relativeToChangelogFile": true
+      }
+    },
+    {
+      "include": {
+        "file": "liquibase-insertGenres.json",
+        "relativeToChangelogFile": true
+      }
+    },
+    {
+      "include": {
+        "file": "liquibase-insertFilmActors.json",
+        "relativeToChangelogFile": true
+      }
+    },
+    {
+      "include": {
+        "file": "liquibase-insertFilmGenres.json",
+        "relativeToChangelogFile": true
+      }
+    }
+  ]
+}

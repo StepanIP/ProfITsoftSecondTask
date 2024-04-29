@@ -1,0 +1,352 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "2",
+        "author": "postgres",
+        "changes": [
+          {
+            "insert": {
+              "tableName": "directors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "1"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Christopher Nolan"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "directors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "2"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Quentin Tarantino"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "directors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "3"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Steven Spielberg"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "directors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "4"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Martin Scorsese"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "directors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "5"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "David Fincher"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "directors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "6"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "James Cameron"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "directors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "7"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Peter Jackson"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "directors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "8"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Ridley Scott"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "directors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "9"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Alfred Hitchcock"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "directors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "10"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Stanley Kubrick"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "directors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "11"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Francis Ford Coppola"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "directors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "12"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Tim Burton"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "directors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "13"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Robert Zemeckis"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "directors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "14"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Clint Eastwood"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "directors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "15"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "David Lynch"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "directors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "16"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Woody Allen"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "directors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "17"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "George Lucas"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "directors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "18"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Clint Eastwood"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "directors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "19"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Ang Lee"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "directors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "20"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Darren Aronofsky"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

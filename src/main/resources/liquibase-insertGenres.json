@@ -1,0 +1,352 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "3",
+        "author": "postgres",
+        "changes": [
+          {
+            "insert": {
+              "tableName": "genres",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "1"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Action"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "genres",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "2"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Adventure"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "genres",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "3"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Sci-Fi"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "genres",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "4"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Drama"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "genres",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "5"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Crime"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "genres",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "6"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "History"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "genres",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "7"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Biography"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "genres",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "8"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Romance"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "genres",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "9"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Thriller"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "genres",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "10"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Mystery"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "genres",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "11"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Fantasy"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "genres",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "12"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Animation"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "genres",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "13"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "War"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "genres",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "14"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Fantasy"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "genres",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "15"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Horror"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "genres",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "16"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Family"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "genres",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "17"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Western"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "genres",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "18"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Comedy"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "genres",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "19"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Musical"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "genres",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "20"
+                  },
+                  "column": {
+                    "name": "name",
+                    "value": "Documentary"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

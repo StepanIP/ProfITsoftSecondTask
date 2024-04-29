@@ -16,6 +16,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+@Table(name = "films")
 public class Film {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,25 +32,23 @@ public class Film {
     @ValidReleaseYear
     private int year;
 
-    @NotBlank(message = "Director is required")
-    @Size(max = 255, message = "Director name cannot be longer than 255 characters")
-    @Pattern(regexp = "^(?:[A-Z][a-z]*)(?:\\s+[A-Z][a-z]*|-[A-Z][a-z]*)*$",
-            message = "Each word should start with a capital letter followed by lowercase letters")
-    private String director;
+    @ManyToOne
+    @JoinColumn(name = "director_id", nullable = false)
+    private Director director;
 
-    @ElementCollection
-    @CollectionTable(name = "actors", joinColumns = @JoinColumn(name = "actor_id"))
-    @Column(name = "actors")
-    @NotBlank(message = "Actors are required")
-    @Pattern(regexp = "^(?:[A-Z][a-z]*)(?:\\s+[A-Z][a-z]*)*$",
-            message = "Each word should start with a capital letter followed by lowercase letters")
-    private List<String> actors;
+    @ManyToMany
+    @JoinTable(
+            name = "film_actors",
+            joinColumns = @JoinColumn(name = "film_id"),
+            inverseJoinColumns = @JoinColumn(name = "actor_id")
+    )
+    private List<Actor> actors;
 
-    @ElementCollection
-    @CollectionTable(name = "genres", joinColumns = @JoinColumn(name = "genre_id"))
-    @Column(name = "genres")
-    @NotBlank(message = "Genres are required")
-    @Pattern(regexp = "^(?:[A-Z][a-z]*)(?:\\s+[A-Z][a-z]*|-[A-Z][a-z]*)*$",
-            message = "Each word should start with a capital letter followed by lowercase letters")
-    private List<String> genres;
+    @ManyToMany
+    @JoinTable(
+            name = "film_genres",
+            joinColumns = @JoinColumn(name = "film_id"),
+            inverseJoinColumns = @JoinColumn(name = "genre_id")
+    )
+    private List<Genre> genres;
 }

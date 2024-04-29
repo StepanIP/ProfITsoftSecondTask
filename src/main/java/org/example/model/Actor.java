@@ -12,8 +12,8 @@ import javax.persistence.Table;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Table(name = "directors")
-public class Director {
+@Table(name = "actors")
+public class Actor {
     @Id
     private int id;
     private String name;

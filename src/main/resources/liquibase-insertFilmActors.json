@@ -1,0 +1,316 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "7",
+        "author": "postgres",
+        "changes": [
+          {
+            "insert": {
+              "tableName": "film_actors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "film_id",
+                    "valueNumeric": "1"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "actor_id",
+                    "valueNumeric": "1"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "film_actors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "film_id",
+                    "valueNumeric": "1"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "actor_id",
+                    "valueNumeric": "2"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "film_actors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "film_id",
+                    "valueNumeric": "1"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "actor_id",
+                    "valueNumeric": "3"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "film_actors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "film_id",
+                    "valueNumeric": "2"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "actor_id",
+                    "valueNumeric": "4"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "film_actors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "film_id",
+                    "valueNumeric": "2"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "actor_id",
+                    "valueNumeric": "5"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "film_actors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "film_id",
+                    "valueNumeric": "2"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "actor_id",
+                    "valueNumeric": "6"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "film_actors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "film_id",
+                    "valueNumeric": "3"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "actor_id",
+                    "valueNumeric": "2"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "film_actors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "film_id",
+                    "valueNumeric": "3"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "actor_id",
+                    "valueNumeric": "8"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "film_actors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "film_id",
+                    "valueNumeric": "3"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "actor_id",
+                    "valueNumeric": "9"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "film_actors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "film_id",
+                    "valueNumeric": "4"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "actor_id",
+                    "valueNumeric": "10"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "film_actors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "film_id",
+                    "valueNumeric": "4"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "actor_id",
+                    "valueNumeric": "11"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "film_actors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "film_id",
+                    "valueNumeric": "5"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "actor_id",
+                    "valueNumeric": "13"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "film_actors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "film_id",
+                    "valueNumeric": "5"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "actor_id",
+                    "valueNumeric": "14"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "film_actors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "film_id",
+                    "valueNumeric": "6"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "actor_id",
+                    "valueNumeric": "14"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "film_actors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "film_id",
+                    "valueNumeric": "6"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "actor_id",
+                    "valueNumeric": "15"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "film_actors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "film_id",
+                    "valueNumeric": "6"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "actor_id",
+                    "valueNumeric": "16"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

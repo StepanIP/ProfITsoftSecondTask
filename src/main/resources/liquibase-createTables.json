@@ -1,0 +1,202 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "1",
+        "author": "postgres",
+        "changes": [
+          {
+            "createTable": {
+              "tableName": "directors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "type": "int",
+                    "autoIncrement": true,
+                    "constraints": {
+                      "primaryKey": true,
+                      "nullable": false
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "name",
+                    "type": "varchar(255)",
+                    "constraints": {
+                      "nullable": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "createTable": {
+              "tableName": "actors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "type": "int",
+                    "autoIncrement": true,
+                    "constraints": {
+                      "primaryKey": true,
+                      "nullable": false
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "name",
+                    "type": "varchar(255)",
+                    "constraints": {
+                      "nullable": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "createTable": {
+              "tableName": "genres",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "type": "int",
+                    "autoIncrement": true,
+                    "constraints": {
+                      "primaryKey": true,
+                      "nullable": false
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "name",
+                    "type": "varchar(255)",
+                    "constraints": {
+                      "nullable": false
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "createTable": {
+              "tableName": "films",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "type": "int",
+                    "autoIncrement": true,
+                    "constraints": {
+                      "primaryKey": true,
+                      "nullable": false
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "title",
+                    "type": "varchar(255)"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "year",
+                    "type": "int"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "director_id",
+                    "type": "int",
+                    "constraints": {
+                      "foreignKey": {
+                        "name": "fk_director",
+                        "references": "directors(id)",
+                        "deleteCascade": true
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "createTable": {
+              "tableName": "film_actors",
+              "columns": [
+                {
+                  "column": {
+                    "name": "film_id",
+                    "type": "int",
+                    "constraints": {
+                      "foreignKey": {
+                        "name": "fk_film",
+                        "references": "films(id)",
+                        "deleteCascade": true
+                      }
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "actor_id",
+                    "type": "int",
+                    "constraints": {
+                      "foreignKey": {
+                        "name": "fk_actor",
+                        "references": "actors(id)",
+                        "deleteCascade": true
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "createTable": {
+              "tableName": "film_genres",
+              "columns": [
+                {
+                  "column": {
+                    "name": "film_id",
+                    "type": "int",
+                    "constraints": {
+                      "foreignKey": {
+                        "name": "fk_film",
+                        "references": "films(id)",
+                        "deleteCascade": true
+                      }
+                    }
+                  }
+                },
+                {
+                  "column": {
+                    "name": "genre_id",
+                    "type": "int",
+                    "constraints": {
+                      "foreignKey": {
+                        "name": "fk_genre",
+                        "references": "genres(id)",
+                        "deleteCascade": true
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

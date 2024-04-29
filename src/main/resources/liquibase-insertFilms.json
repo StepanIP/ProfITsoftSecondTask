@@ -1,0 +1,322 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "4",
+        "author": "postgres",
+        "changes": [
+          {
+            "insert": {
+              "tableName": "films",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "1"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "title",
+                    "value": "Inception"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "year",
+                    "valueNumeric": "2010"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "director_id",
+                    "valueNumeric": "1"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "films",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "2"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "title",
+                    "value": "The Shawshank Redemption"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "year",
+                    "valueNumeric": "1994"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "director_id",
+                    "valueNumeric": "2"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "films",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "3"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "title",
+                    "value": "The Godfather"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "year",
+                    "valueNumeric": "1972"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "director_id",
+                    "valueNumeric": "3"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "films",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "4"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "title",
+                    "value": "Forrest Gump"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "year",
+                    "valueNumeric": "1994"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "director_id",
+                    "valueNumeric": "4"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "films",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "5"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "title",
+                    "value": "The Dark Knight"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "year",
+                    "valueNumeric": "2008"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "director_id",
+                    "valueNumeric": "5"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "films",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "6"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "title",
+                    "value": "Pulp Fiction"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "year",
+                    "valueNumeric": "1994"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "director_id",
+                    "valueNumeric": "6"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "films",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "7"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "title",
+                    "value": "Schindler's List"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "year",
+                    "valueNumeric": "1993"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "director_id",
+                    "valueNumeric": "7"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "films",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "8"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "title",
+                    "value": "The Lord of the Rings: The Return of the King"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "year",
+                    "valueNumeric": "2003"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "director_id",
+                    "valueNumeric": "8"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "films",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "9"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "title",
+                    "value": "Fight Club"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "year",
+                    "valueNumeric": "1999"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "director_id",
+                    "valueNumeric": "9"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "insert": {
+              "tableName": "films",
+              "columns": [
+                {
+                  "column": {
+                    "name": "id",
+                    "valueNumeric": "10"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "title",
+                    "value": "The Matrix"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "year",
+                    "valueNumeric": "1999"
+                  }
+                },
+                {
+                  "column": {
+                    "name": "director_id",
+                    "valueNumeric": "10"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
