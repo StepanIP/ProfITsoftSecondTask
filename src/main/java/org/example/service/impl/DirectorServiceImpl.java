@@ -45,7 +45,7 @@ public class DirectorServiceImpl implements DirectorService {
     }
 
     @Override
-    public boolean isDirectorNameUnique(String name) {
-        return directorRepository.findByName(name) == null;
+    public Optional<Director> findByName(String name) {
+        return directorRepository.findByName(name);
     }
 }

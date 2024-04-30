@@ -11,5 +11,5 @@ public interface DirectorService {
     Optional<Director> getDirectorById(int id);
     Director updateDirector(Director director);
     void deleteDirector(int id);
-    boolean isDirectorNameUnique(String name);
+    Optional<Director> findByName(String name);
 }

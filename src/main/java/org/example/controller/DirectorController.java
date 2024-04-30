@@ -29,23 +29,25 @@ public class DirectorController {
     }
 
     @PostMapping("/director")
-    public ResponseEntity<Director> createDirector(@RequestBody Director entityData) {
-        if (directorService.isDirectorNameUnique(entityData.getName())) {
-            Director createdEntity = directorService.saveDirector(entityData);
-            return new ResponseEntity<>(createdEntity, HttpStatus.CREATED);
+    public ResponseEntity<Director> createDirector(@RequestBody Director directorData) {
+        Optional<Director> existingDirector = directorService.findByName(directorData.getName());
+        if (existingDirector.isEmpty()) {
+            Director createdDirector = directorService.saveDirector(directorData);
+            return new ResponseEntity<>(createdDirector, HttpStatus.CREATED);
         } else {
             return new ResponseEntity<>(HttpStatus.CONFLICT);
         }
     }
 
     @PutMapping("/director/{id}")
-    public ResponseEntity<Director> updateDirector(@PathVariable int id, @RequestBody Director entityData) {
-        Optional<Director> existingEntity = directorService.getDirectorById(id);
-        if (existingEntity.isPresent()) {
-            if (directorService.isDirectorNameUnique(entityData.getName())) {
-                entityData.setId(id);
-                Director updatedEntity = directorService.updateDirector(entityData);
-                return new ResponseEntity<>(updatedEntity, HttpStatus.OK);
+    public ResponseEntity<Director> updateDirector(@PathVariable int id, @RequestBody Director directorData) {
+        Optional<Director> existingDirector = directorService.getDirectorById(id);
+        if (existingDirector.isPresent()) {
+            Optional<Director> directorWithSameName = directorService.findByName(directorData.getName());
+            if (directorWithSameName.isEmpty() || directorWithSameName.get().getId() == id) {
+                directorData.setId(id);
+                Director updatedDirector = directorService.updateDirector(directorData);
+                return new ResponseEntity<>(updatedDirector, HttpStatus.OK);
             } else {
                 return new ResponseEntity<>(HttpStatus.CONFLICT);
             }
