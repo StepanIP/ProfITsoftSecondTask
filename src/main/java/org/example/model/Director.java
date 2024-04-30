@@ -16,4 +16,8 @@ public class Director {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
+
+    public Director(String name) {
+        this.name = name;
+    }
 }

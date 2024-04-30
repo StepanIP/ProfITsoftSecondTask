@@ -16,7 +16,11 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Table(name = "films")
+@Table(name = "films",
+        indexes = {
+                @Index(name = "index_on_director", columnList = "director_id"),
+        }
+)
 public class Film {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,23 +36,31 @@ public class Film {
     @ValidReleaseYear
     private int year;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
     @JoinColumn(name = "director_id", nullable = false)
     private Director director;
 
-    @ManyToMany
+    @ManyToMany(cascade=CascadeType.ALL)
     @JoinTable(
             name = "film_actors",
             joinColumns = @JoinColumn(name = "film_id"),
-            inverseJoinColumns = @JoinColumn(name = "actor_id")
+            inverseJoinColumns = @JoinColumn(name = "actor_id"),
+            indexes = {
+                    @Index(name = "index_on_actor_id", columnList = "actor_id"),
+                    @Index(name = "index_on_film_id", columnList = "film_id")
+            }
     )
     private List<Actor> actors;
 
-    @ManyToMany
+    @ManyToMany(cascade=CascadeType.ALL)
     @JoinTable(
             name = "film_genres",
             joinColumns = @JoinColumn(name = "film_id"),
-            inverseJoinColumns = @JoinColumn(name = "genre_id")
+            inverseJoinColumns = @JoinColumn(name = "genre_id"),
+            indexes = {
+                    @Index(name = "index_on_genre_id", columnList = "genre_id"),
+                    @Index(name = "index_on_film_id", columnList = "film_id")
+            }
     )
     private List<Genre> genres;
 }

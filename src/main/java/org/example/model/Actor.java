@@ -16,4 +16,8 @@ public class Actor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
+
+    public Actor(String name) {
+        this.name = name;
+    }
 }
