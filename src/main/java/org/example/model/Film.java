@@ -8,6 +8,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.validation.constraints.Pattern;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -63,4 +64,13 @@ public class Film {
             }
     )
     private List<Genre> genres;
+
+    public Film(String title, int year, Director director, List<Actor> actors, List<Genre> genres)
+    {
+        this.title = title;
+        this.year = year;
+        this.director = director;
+        this.actors = actors;
+        this.genres = genres;
+    }
 }

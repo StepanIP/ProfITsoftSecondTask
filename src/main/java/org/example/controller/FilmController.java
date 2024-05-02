@@ -1,20 +1,24 @@
 package org.example.controller;
 
+import org.example.dto.request.FilmPaginationRequest;
+import org.example.dto.request.FilmReportRequest;
+import org.example.dto.request.FilmRequest;
+import org.example.dto.response.UploadResponse;
+import org.example.dto.response.FilmListResponse;
 import org.example.model.Film;
 import org.example.service.FilmService;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ByteArrayResource;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/film")
 public class FilmController {
 
     private final FilmService filmService;
@@ -23,32 +27,31 @@ public class FilmController {
         this.filmService = filmService;
     }
 
-    @PostMapping("/film")
-    public ResponseEntity<Film> createFilm(@RequestBody Film filmData) {
+    @PostMapping("/")
+    public ResponseEntity<Film> createFilm(@RequestBody FilmRequest filmData) {
         Film createdFilm = filmService.saveFilm(filmData);
         return new ResponseEntity<>(createdFilm, HttpStatus.CREATED);
     }
 
-    @GetMapping("/film/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Film> getFilmById(@PathVariable int id) {
         Optional<Film> film = filmService.getFilmById(id);
         return film.map(value -> new ResponseEntity<>(value, HttpStatus.OK))
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
-    @PutMapping("/film/{id}")
-    public ResponseEntity<Film> updateFilm(@PathVariable int id, @RequestBody Film filmData) {
+    @PutMapping("/{id}")
+    public ResponseEntity<Film> updateFilm(@PathVariable int id, @RequestBody FilmRequest filmData) {
         Optional<Film> existingFilm = filmService.getFilmById(id);
         if (existingFilm.isPresent()) {
-            filmData.setId(id);
-            Film updatedFilm = filmService.updateFilm(filmData);
+            Film updatedFilm = filmService.updateFilm(id, filmData);
             return new ResponseEntity<>(updatedFilm, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 
-    @DeleteMapping("/film/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteFilm(@PathVariable int id) {
         Optional<Film> existingFilm = filmService.getFilmById(id);
         if (existingFilm.isPresent()) {
@@ -59,23 +62,25 @@ public class FilmController {
         }
     }
 
-    @PostMapping("/film/film_list")
-    public ResponseEntity<List<Film>> getFilmsWithPagination(
-            @RequestParam Map<String, String> filters) {
-        // Implementation for getting a list of films with pagination and filtering
-        return null;
+    @PostMapping("/film_list")
+    public ResponseEntity<FilmListResponse> getFilmsWithPagination(@RequestBody FilmPaginationRequest request) {
+        return new ResponseEntity<>(filmService.getFilmsWithPagination(request), HttpStatus.OK);
     }
 
     @PostMapping("/film/film_report")
-    public ResponseEntity<byte[]> generateFilmReport(@RequestParam int directorId,
-                                                     @RequestParam Map<String, String> filters) {
-        // Implementation for generating and downloading film report
-        return null;
+    public ResponseEntity<ByteArrayResource> generateFilmReport(@RequestBody FilmReportRequest filmReportRequest) {
+        ByteArrayResource report = filmService.generateFilmReport(filmReportRequest);
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=report.xlsx");
+
+        return ResponseEntity.ok()
+                .headers(headers)
+                .body(report);
     }
 
     @PostMapping("/film/upload")
-    public ResponseEntity<Map<String, Integer>> importFilmsFromJson(@RequestParam("file") MultipartFile jsonFile) {
-        // Implementation for importing films from JSON file
-        return null;
-    }
+    public ResponseEntity<UploadResponse> importFilmsFromJson(@RequestParam("file") MultipartFile jsonFile) {
+        UploadResponse response = filmService.importFilmsFromJson(jsonFile);
+        return new ResponseEntity<>(response, HttpStatus.OK);}
 }
