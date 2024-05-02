@@ -72,7 +72,7 @@ public class FilmController {
         ByteArrayResource report = filmService.generateFilmReport(filmReportRequest);
 
         HttpHeaders headers = new HttpHeaders();
-        headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=report.xlsx");
+        headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=report.xls");
 
         return ResponseEntity.ok()
                 .headers(headers)
